@@ -1,7 +1,14 @@
 
-# NS-QPE 
+# NS-QPE: A Neuro-Symbolic approach for Quantitative Precipitation Estimation (QPE)
 
-This repository contains code for a Neuro-Symbolic approach for Quantitative Precipitation Estimation (QPE) using polarimetric radar data. It integrates symbolic equations derived from symbolic regression and empirical formulas with a neural network model in PyTorch.
+## Introduction
+
+This repository contains code for the paper "NS-QPE: A Neuro-Symbolic Approach Towards Accurate and Interpretable Quantitative Precipitation Estimation Using Polarimetric Radar Data", accepted by the IEEE AMLDS 2025 conference. It integrates symbolic equations derived from symbolic regression and empirical formulas with a neural network model in PyTorch.
+
+## Abstract
+
+Accurate precipitation estimation is crucial for managing water resources and mitigating disasters. While empirical equations exist for Quantitative Precipitation Estimation (QPE) using dual-polarization radar data, they are often limited to specific meteorological case studies. Deep learning has also been applied for dual-polarization radar QPE, but such models often function as black boxes, lacking interpretability and explainability. This study introduces a hybrid Neuro-Symbolic AI method for quantitative precipitation estimation using polarimetric radar data, called NS-QPE. Our method consists of a Neural Network (NN) component and a symbolic component, guiding each other during training using a custom loss function that combines the losses of both components using a weighted average method. Parameters of the neural network and the symbolic equation are updated simultaneously via the backpropagation of model training. The hybrid model combines predictions of the neural network and symbolic equations, aiming to balance interpretability with predictive performance. Our results indicate that the hybrid model not only maintains RMSE scores comparable to the purely neural network model but also enhances interpretability through the integration of symbolic knowledge. Moreover, our model calibrates the parameters of symbolic equations for the case study it is trained on, demonstrating lower sensitivity to initial values and improved accuracy compared to traditional calibration method used for QPE.
+
 
 ## Installation
 
@@ -50,3 +57,7 @@ Run the cells NS_QPE_V1.ipynb file to:
 4. Evaluate the performance of the model using MAE, RMSE, R², and bias metrics on test data.
 
 5. Interpret feature importance across different rainfall conditions using SHAP values.
+
+
+
+
